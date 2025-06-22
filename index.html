@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Ved Khajone" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Ved Khajone">Ved Khajone</h1>
+
+          <p class="title">Driven by Curiosity</p> 
+          
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <a href="mailto:richard@example.com" class="icon-box" style="text-decoration: none;">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:vedhanshukhajone@gmail.com" class="contact-link">vedhanshukhajone@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <a href="tel:+91 9373930498" class="icon-box" style="text-decoration: none;">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </a>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+91 9373930498" class="contact-link">+91 9373930498</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20040623/20040624&text=Ved+Khajone%27s+Birthday&details=Don%27t+forget+to+wish+Ved%21"
+              target="_blank"
+              class="icon-box"
+              style="text-decoration: none;">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </a>
+            
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2004-06-23">June 23, 2004</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <a href="https://www.google.com/maps/place/Nagpur" target="_blank" class="icon-box"
+              style="text-decoration: none;">
+              <ion-icon name="location-outline"></ion-icon>        
+            </a>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Nagpur, Maharashtra, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/vedkhajone" target="_blank" class="social-link" title="LinkedIn">
+              <img src="assets\images\google.png" alt="Google Developers" style="height:20px;">
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/vedkhajone" target="_blank" class="social-link" title="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/Vedkhajone" target="_blank" class="social-link" title="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://leetcode.com/vedkhajone" target="_blank" class="social-link" title="LeetCode">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="height: 20px;">  
+              </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certifications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a <b>curious and driven</b> engineering student with a deep love for <b><b>Electronics and Computers</b></b>. Passionate about both
+            hardware and software, I enjoy building hands-on projects that combine<b> <b>AI/ML, IoT, and Cloud technologies</b></b> to create
+            real-world solutions.
+          </p>
+
+          <p>
+            I thrive on creativity, innovation, and continuous learning, always eager to grow and take on new challenges. I enjoy
+            collaborating in teams and love connecting with like-minded people for ideas, insights, or future opportunities.
+            <i>Let’s connect and build something amazing together!</i>
+
+          </p>
+        </section>
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/aiml.svg" alt="AIMl Icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI & ML</h4>
+
+                <p class="service-item-text">
+                  Creating intelligent AI/ML solutions that analyze data, learn patterns, and drive automation.                  and scalable AI solutions.                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/iot.svg" alt="IoT Icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">IoT</h4>
+
+                <p class="service-item-text">
+                  Developing smart IoT systems that connect devices, monitor data, andenable automation.
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/cloud.svg" alt="Google Cloud Icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Google Cloud</h4>
+
+                <p class="service-item-text">
+                  Building cloud-native solutions using Google Cloud for scalable, secure, and intelligent deployments.              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Classic_guitar.svg" alt="Guitar icon" width="50" height="50">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Guitarist</h4>
+
+                <p class="service-item-text">
+                  Playing chill guitar melodies inspired by love, emotion,and quiet moments.                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Reflections</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <!-- Keep for functionality, hide visually -->
+                <figure class="testimonials-avatar-box" style="display: none;">
+                  <img src="./assets/images/avatar-1.png" alt="Ved Khajone" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Curiosity is my compass🧭</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I’ve always been the kind of person who pulls things apart just to see how they work — from circuits to algorithms.
+                    Learning AI/ML, IoT, and even game dev isn’t just about skill-building for me — it’s about weaving imagination into
+                    reality.</p>
+                    <p style="text-align: right; margin-top: 1rem; font-weight: bold; color: hsl(265, 100%, 88%);">— Ved Khajone</p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Ved Khajone</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Google Cloud Lead- GDG@SCOE</h4>
+
+              <span><i>2025-Present</i></span>
+
+              <p class="timeline-text">
+                Facilitating cloud learning initiatives, hands-on labs, and peer collaboration as part of the Google Cloud Career
+                Readiness program.
+              </p>
+
+            </li>
+            <li class="timeline-item">
+            
+              <h4 class="h4 timeline-item-title">Student Co-ordinator-Training & Placement Department @SCOE</h4>
+            
+              <span><i>2025-Present</i></span>
+            
+              <p class="timeline-text">
+                Managed placement drives, coordinated with recruiters, anchored campus events, and handled end-to-end T&P operations at
+                the college level.
+              </p>
+              </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Executive Member - AWS Cloud Club @SCOE</h4>
+
+              <span><i>2024-2025</i></span>
+
+              <p class="timeline-text">
+                Contributed to organizing cloud-focused events, managing community engagement, and promoting AWS learning resources.              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Btech-Sanjivani College Of Engineering,Kopargaon</h4>
+
+              <span><i>2023-2027</i></span>
+
+              <p class="timeline-text">
+                Currently pursuing B.Tech in Electronics and Computer Engineering, with a strong interest in embedded systems, AI/ML,
+                and cloud-integrated technologies.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">HSC-St. Paul Junior College,Nagpur</h4>
+
+              <span><i>2021-2022</i></span>
+
+              <p class="timeline-text">
+                Completed 12th grade with a focus on Physics, Chemistry, and Mathematics, building a strong foundation in core science
+                and problem-solving.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">10th CBSC Board-Ira International School,Nagpur</h4>
+
+              <span><i>2019-2020</i></span>
+
+              <p class="timeline-text">
+                Completed 10th grade with a strong academic foundation and active participation in school activities.
+              </p>
+
+            </li>
+
+
+          </ol>
+
+        </section>
+      
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Hobbies</h3>
+
+          <ul class="skills-list content-card hobby-list">
+
+            <li class="skills-item hobby-item">
+              <div class="title-wrapper">
+                <h5 class="h5">🎸 Playing Guitar</h5>
+              </div>
+            </li>
+            
+            <li class="skills-item hobby-item">
+              <div class="title-wrapper">
+                <h5 class="h5">✈️ Travelling</h5>
+              </div>
+            </li>
+            
+            <li class="skills-item hobby-item">
+              <div class="title-wrapper">
+                <h5 class="h5">🎤 Singing</h5>
+              </div>
+            </li>
+            
+            <li class="skills-item hobby-item">
+              <div class="title-wrapper">
+                <h5 class="h5">🎨 Sketching</h5>
+              </div>
+            </li>
+            
+            <li class="skills-item hobby-item">
+              <div class="title-wrapper">
+                <h5 class="h5">🎮 Gaming</h5>
+              </div>
+            </li>   
+            
+          
+          </ul>
+          <li>For Professional resume Click 👉<href="hbfhjaef">
+          </li>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #Projects
+      -->
+
+      <article class="portfolio" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="portfolio">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>AI & ML</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Hardware</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>AI & ML</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="Hardware">
+              <a href="https://github.com/Vedkhajone/BIOT-Hand">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Bionic.png" alt="BIoT Hand" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">BIoT Hand</h3>
+
+                <p class="project-category">Hardware</p>
+
+                <li class="project-item  active" data-filter-item data-category="Hardware">
+                  <a href="https://github.com/Vedkhajone/MedPred-Diseases-Prediction">
+                
+                    <figure class="project-img">
+                      <div class="project-item-icon-box">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </div>
+                
+                      <img src="./assets/images/project-1.jpg" alt="MedPred" loading="lazy">
+                    </figure>
+                
+                    <h3 class="project-title">Med Pred</h3>
+                
+                    <p class="project-category">AIML</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="certifications">
+
+        <header>
+          <h2 class="h2 article-title">Certifications</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/1.jpeg" alt="ML specilization" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">AIML</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Jan 23, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">ML specilization</h3>
+
+                  <p class="blog-text">
+                    Completed a course on Supervised Machine Learning focusing on regression and classification techniques. Gained hands-on
+                    experience in building, training, and evaluating predictive models.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Feb 23, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Deep Learinig</h3>
+
+                  <p class="blog-text">
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
+
+         
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905803062!2d78.99010878722896!3d21.161065902250325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1750592741400!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
