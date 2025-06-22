@@ -154,6 +154,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].classList.remove("active");
       }
     }
+    
+    // ✅ Check on page load if active page is About
+    document.addEventListener("DOMContentLoaded", () => {
+      const activePage = document.querySelector("[data-page].active");
+      const sidebar = document.querySelector("[data-sidebar]");
+
+      if (activePage && activePage.dataset.page === "about") {
+        sidebar.classList.add("active");
+      } else {
+        sidebar.classList.remove("active");
+      }
+    });
 
   });
 }
