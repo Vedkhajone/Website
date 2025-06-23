@@ -82,13 +82,16 @@ const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    const itemCategories = filterItems[i].dataset.category
+      .split(",")
+      .map(cat => cat.trim().toLowerCase());
+
+    if (selectedValue === "all" || itemCategories.includes(selectedValue)) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
     }
+  
 
   }
 
@@ -169,3 +172,49 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const sendBtn = document.querySelector("[data-form-btn]");
+  const inputs = document.querySelectorAll("[data-form-input]");
+
+  const statusMsg = document.createElement("p");
+  statusMsg.style.marginTop = "10px";
+  statusMsg.style.color = "#FFD86B"; // lavender-golden theme
+  form.appendChild(statusMsg);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    fetch("https://script.google.com/macros/s/AKfycbz0y0YDtoIs2tk78fgb9skHWBWawFSbtJAmgWbKbdLMb_UFVEm4PcdVbA4m3mp03QoiFg/exec", {
+      method: "POST",
+      body: JSON.stringify({
+        fullname: form.fullname.value,
+        email: form.email.value,
+        message: form.message.value
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.result === "success") {
+          statusMsg.textContent = "Message sent successfully!";
+          form.reset();
+          sendBtn.setAttribute("disabled", true);
+        } else {
+          statusMsg.textContent = "Something went wrong. Please try again.";
+        }
+      })
+      .catch(() => {
+        statusMsg.textContent = "Error: Could not connect to server.";
+      });
+  });
+
+  // Enable/disable send button based on validity
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      sendBtn.disabled = !form.checkValidity();
+    });
+  });
+});

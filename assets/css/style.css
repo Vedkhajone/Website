@@ -1794,7 +1794,25 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+.tilted-image {
+  perspective: 1000px;
+  /* Adds 3D perspective */
+  display: inline-block;
+  transform-style: preserve-3d;
+}
 
+.tilted-image img {
+  width: 100%;
+  max-width: 300px;
+  transform: rotateY(-20deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+.tilted-image img:hover {
+  transform: rotateY(-15deg) rotateX(2deg) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
 
 /**
  * responsive larger than 1250px screen
