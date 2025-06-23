@@ -1889,7 +1889,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img {
+    border-radius: 20%;
+      /* makes it a circle */
+      width: 120px;
+      height: 120px;
+      object-fit: cover; }
 
   .info-content .name {
     white-space: nowrap;
